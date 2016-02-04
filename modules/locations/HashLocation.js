@@ -98,11 +98,7 @@ var HashLocation = {
   },
 
   getCurrentPath() {
-    return decodeURI(
-      // We can't use window.location.hash here because it's not
-      // consistent across browsers - Firefox will pre-decode it!
-      window.location.href.split('#')[1] || ''
-    );
+    return window.location.href.split('#')[1] || ''
   },
 
   toString() {
